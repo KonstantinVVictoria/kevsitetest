@@ -277,6 +277,7 @@
       }
 
       /* Other styles... */
+
       #past-events .pastEvents\[\] {
         background-color: #1e1e1e;
         padding: 20px;
@@ -409,6 +410,12 @@
         font-family: "Playfair Display", serif;
         font-size: 14px;
       }
+      section {
+        scroll-margin-top: 100px;
+      }
+      section#hero {
+        scroll-margin-top: 0px;
+      }
       /* Mobile Responsive Styles */
       @media (max-width: 800px) {
         .container {
@@ -510,7 +517,11 @@
         p {
           font-size: 0.95em;
         }
-
+        .image_banner {
+          height: 40vh;
+          object-fit: cover;
+          border-radius: 0px;
+        }
         #contact-form button[type="submit"] {
           font-weight: 500 !important;
           font-family: "Montserrat", Arial, sans-serif;
@@ -866,7 +877,7 @@
             const serviceName = e.target.previousElementSibling.textContent;
             const eventTypeDropdown =
               document.getElementById("form_event_type"); // Changed from Input to Dropdown
-            const contactSection = document.getElementById("booking");
+            const contactSection = document.getElementById("locations");
 
             if (eventTypeDropdown && contactSection) {
               eventTypeDropdown.value = serviceName;
